@@ -21,6 +21,9 @@
   <DonateText/>
   <DonateLink/>
   <Description>A automated pre-roll program for your Plex pre-roll needs.</Description>
+  <Screenshot>https://user-images.githubusercontent.com/75536101/147721648-bbd89cc5-dfba-4736-9998-37e8473dbecb.png</Screenshot>
+  <Screenshot>https://user-images.githubusercontent.com/75536101/147721694-24749a2f-e3ca-43e4-80b6-c858297064e7.png</Screenshot>
+  <Screenshot>https://user-images.githubusercontent.com/75536101/147721789-8569ff67-e4b6-4573-9f8e-576333f89416.png</Screenshot>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
