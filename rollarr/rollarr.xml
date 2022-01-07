@@ -9,18 +9,38 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/118116-support-rollar-docker/?tab=comments#comment-1080491</Support>
   <Project>https://github.com/TheHumanRobot/Rollarr</Project>
-  <Overview>A automated pre-roll program for your plex pre-roll needs.</Overview>
-  <Category>Tools:Utilities</Category>
+  <Overview>A automated pre-roll program for your plex pre-roll needs.&#xD;
+&#xD;
+Before creating this container you will have to:&#xD;
+ 1. Create the appdata folder as '/mnt/user/appdata/rollarr'&#xD;
+ 2. Create a new file inside that folder with the name 'data.json'&#xD;
+ 3. Enter the following text inside the 'data.json' file:&#xD;
+      {"URL": ""}&#xD;
+&#xD;
+After that you can download and start the container.&#xD;
+&#xD;
+For more information, instructions and help, consult the help thread at https://forums.unraid.net/topic/118116-support-rollarr-docker/</Overview>
+  <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:3100]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/MasterEvarior/unraid-templates/main/rollarr/rollarr.xml</TemplateURL>
   <Icon>https://github.com/MasterEvarior/unraid-templates/blob/main/rollarr/rollarr.png?raw=true</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1641558555</DateInstalled>
+  <DateInstalled>1641589744</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>A automated pre-roll program for your plex pre-roll needs.</Description>
+  <Description>A automated pre-roll program for your plex pre-roll needs.&#xD;
+&#xD;
+Before creating this container you will have to:&#xD;
+ 1. Create the appdata folder as '/mnt/user/appdata/rollarr'&#xD;
+ 2. Create a new file inside that folder with the name 'data.json'&#xD;
+ 3. Enter the following text inside the 'data.json' file:&#xD;
+      {"URL": ""}&#xD;
+&#xD;
+After that you can download and start the container.&#xD;
+&#xD;
+For more information, instructions and help, consult the help thread at https://forums.unraid.net/topic/118116-support-rollarr-docker/</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -38,8 +58,8 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/rollarr</HostDir>
-      <ContainerDir>/rollarr</ContainerDir>
+      <HostDir>/mnt/user/appdata/rollarr/data.json</HostDir>
+      <ContainerDir>/rollar/data.json</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -47,5 +67,5 @@
   <Labels/>
   <Config Name="Prerolls" Target="/media/prerolls" Default="" Mode="rw" Description="Path to the pre rolls files. Must be the same for your Plex container." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="GUI" Target="3100" Default="3100" Mode="tcp" Description="Container Port: 3100" Type="Port" Display="always" Required="true" Mask="false">3100</Config>
-  <Config Name="Appdata" Target="/rollarr" Default="/mnt/user/appdata/rollarr" Mode="rw" Description="Contains all relevant configuration and data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rollarr</Config>
+  <Config Name="Appdata" Target="/rollar/data.json" Default="/mnt/user/appdata/rollarr/data.json" Mode="rw" Description="Contains all relevant configuration and data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rollarr/data.json</Config>
 </Container>
