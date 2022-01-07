@@ -9,41 +9,18 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/118116-support-rollar-docker/?tab=comments#comment-1080491</Support>
   <Project>https://github.com/TheHumanRobot/Rollarr</Project>
-  <Overview>A automated pre-roll program for your plex pre-roll needs.&#xD;
-WARNING:&#xD;
-This application is currently somewhat broken. For this to work you have do a little magic, afterwards everything should be fine.&#xD;
-&#xD;
-1. Delete your Rollarr container and image&#xD;
-2. Create in your '/mnt/user/appdata/rollar' directory a new file with the name 'data.json'&#xD;
-3. Enter the following lines into the 'data.json' file&#xD;
-{"URL":""}&#xD;
-4. Reinstall the Rollarr app and change the 'Appdata' path variable to the one shown here: https://forums.unraid.net/uploads/monthly_2022_01/Capture.PNG.482059945670abaf18b16c170727fff8.PNG&#xD;
-&#xD;
-For further information and updates look here: https://forums.unraid.net/topic/118116-support-rollarr-docker/?tab=comments#comment-1081548</Overview>
-  <Category>Tools:</Category>
+  <Overview>A automated pre-roll program for your plex pre-roll needs.</Overview>
+  <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:3100]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/MasterEvarior/unraid-templates/main/rollarr/rollarr.xml</TemplateURL>
   <Icon>https://github.com/MasterEvarior/unraid-templates/blob/main/rollarr/rollarr.png?raw=true</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1641312671</DateInstalled>
+  <DateInstalled>1641558555</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>A automated pre-roll program for your plex pre-roll needs.&#xD;
-WARNING:&#xD;
-This application is currently somewhat broken. For this to work you have do a little magic, afterwards everything should be fine.&#xD;
-&#xD;
-1. Delete your Rollarr container and image&#xD;
-2. Create in your '/mnt/user/appdata/rollar' directory a new file with the name 'data.json'&#xD;
-3. Enter the following lines into the 'data.json' file&#xD;
-{"URL":""}&#xD;
-4. Reinstall the Rollarr app and change the 'Appdata' path variable to the one shown here: https://forums.unraid.net/uploads/monthly_2022_01/Capture.PNG.482059945670abaf18b16c170727fff8.PNG&#xD;
-&#xD;
-For further information and updates look here: https://forums.unraid.net/topic/118116-support-rollarr-docker/?tab=comments#comment-1081548</Description>
-  <Screenshot>https://user-images.githubusercontent.com/75536101/147721648-bbd89cc5-dfba-4736-9998-37e8473dbecb.png</Screenshot>
-  <Screenshot>https://user-images.githubusercontent.com/75536101/147721694-24749a2f-e3ca-43e4-80b6-c858297064e7.png</Screenshot>
-  <Screenshot>https://user-images.githubusercontent.com/75536101/147721789-8569ff67-e4b6-4573-9f8e-576333f89416.png</Screenshot>
+  <Description>A automated pre-roll program for your plex pre-roll needs.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -61,8 +38,8 @@ For further information and updates look here: https://forums.unraid.net/topic/1
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir/>
-      <ContainerDir>/</ContainerDir>
+      <HostDir>/mnt/user/appdata/rollarr</HostDir>
+      <ContainerDir>/rollarr</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -70,5 +47,5 @@ For further information and updates look here: https://forums.unraid.net/topic/1
   <Labels/>
   <Config Name="Prerolls" Target="/media/prerolls" Default="" Mode="rw" Description="Path to the pre rolls files. Must be the same for your Plex container." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="GUI" Target="3100" Default="3100" Mode="tcp" Description="Container Port: 3100" Type="Port" Display="always" Required="true" Mask="false">3100</Config>
-  <Config Name="Appdata" Target="/" Default="/mnt/user/appdata/rollarr" Mode="rw" Description="Contains all relevant configuration and data" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Appdata" Target="/rollarr" Default="/mnt/user/appdata/rollarr" Mode="rw" Description="Contains all relevant configuration and data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rollarr</Config>
 </Container>
