@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>prometheus-qbittorrent-exporter</Name>
+  <Repository>esanchezm/prometheus-qbittorrent-exporter</Repository>
+  <Registry>https://hub.docker.com/r/esanchezm/prometheus-qbittorrent-exporter/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/118116-support-smithynithys-docker-templates/</Support>
+  <Project>https://github.com/esanchezm/prometheus-qbittorrent-exporter</Project>
+  <Overview>Get metrics from a qBittorrent server and offers them in a prometheus format.</Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/MasterEvarior/unraid-templates/main/prometheus-qbittorrent-exporter/prometheus.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647180283</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Get metrics from a qBittorrent server and offers them in a prometheus format.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort/>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>QBITTORRENT_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>QBITTORRENT_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>QBITTORRENT_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>QBITTORRENT_PASS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="qBittorrent Port" Target="QBITTORRENT_PORT" Default="" Mode="" Description="Port of your qBittorrent instance" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="qBittorrent Host" Target="QBITTORRENT_HOST" Default="" Mode="" Description="Hostname/IP of your qBittorrent instance" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="qBittorrent User" Target="QBITTORRENT_USER" Default="" Mode="" Description="Username to your qBittorrent instance" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="qBittorrent Password" Target="QBITTORRENT_PASS" Default="" Mode="" Description="Password to your qBittorrent instance" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Host Port 1" Target="8000" Default="" Mode="tcp" Description="Container Port: 8000" Type="Port" Display="always" Required="true" Mask="false"/>
+</Container>
